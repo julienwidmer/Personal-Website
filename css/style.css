@@ -1,0 +1,643 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/********************
+CSS Reset
+********************/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    height: 100%;
+    /* Disable zoom effect on landscape mode for smartphones */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+
+/********************
+
+Fonts
+
+font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+font-weight: 600;
+font-weight: 400;
+
+********************/
+* {
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 600; /* bold */
+    color: var(--text-color);
+    padding-bottom: 25px;
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.5em
+}
+
+h4, p, li, a, label {
+    line-height: 1.45em;
+    font-weight: 400; /* regular */
+    color: var(--text-color);
+    padding-bottom: 20px;
+}
+
+p, label {
+    font-size: 1.1em
+}
+
+
+/********************
+Links
+********************/
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    padding-bottom: 0;
+}
+
+a:not(a.button) {
+    padding-right: 15px;
+    background: url("../img/icon-arrow-right-light.svg") center right no-repeat;
+    background-size: 9px;
+}
+
+.links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.links a {
+    margin-right: 15px
+}
+
+.links li:last-of-type a {
+    margin-right: inherit
+}
+
+
+/********************
+Buttons
+********************/
+.button {
+    padding: 12px;
+    border-radius: 12px;
+    color: var(--text-color);
+    border: 1px solid var(--btn-border-color);
+    background-color: var(--button-background-color);
+    margin-right: 12px;
+    cursor: pointer;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.button.round {
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.button svg {
+    height: 20px;
+    width: 20px;
+}
+
+.button:not(.button.round) svg {
+    margin-left: 10px;
+}
+
+.buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.buttons button.button:last-of-type,
+footer .buttons .button:last-of-type {
+    margin-right: 0;
+}
+
+#altLanguageButton {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+#appearance svg {
+    height: 25px;
+    width: 25px;
+}
+
+
+/********************
+Logo and icons
+********************/
+.logo {
+    height: 45px;
+    width: 159px;
+}
+
+.icon {
+    padding: 20px;
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+}
+
+
+/********************
+Content Sections
+********************/
+html, header, footer {
+    background-color: var(--secondary-background-color);
+}
+
+nav, header, main, section, footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 760px;
+    width: 100%;
+    padding: 60px 20px;
+    margin: 20px 0px;
+}
+
+main .content img,
+section .content img {
+    max-height: 300px;
+    margin-bottom: 30px;
+}
+
+
+/********************
+Header
+********************/
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+header .content {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+
+/********************
+Navbar
+********************/
+nav {
+    width: 100%;
+    top: -70px; /* move navbar behind screen to create a scroll animation */
+}
+
+nav.fixedNav {
+    /* Blur effect */
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+
+    /* Transition effect when sliding down (and up) */
+    position: fixed;
+    top: 0;
+    -webkit-transition: top 0.5s;
+    -o-transition: top 0.5s;
+    transition: top 0.5s;
+
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+nav .content {
+    margin: 0;
+    margin-top: 0px;
+    padding: 10px 20px;
+
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    padding-top: 30px;
+}
+
+nav.fixedNav .content {
+    padding-top: 10px;
+}
+
+
+/********************
+Main
+********************/
+main {
+    background-color: var(--background-color);
+}
+
+main.fixedNav {
+    /* padding top for navigation height
+    (create empty space to compensate navigation height
+    that is floating */
+    padding-top: 90px;
+}
+
+main .content {
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+
+
+/********************
+Card
+********************/
+.card {
+    background-color: var(--secondary-background-color);
+    border-radius: 12px;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.card.fitContentSize {
+    padding: 40px 20px
+}
+
+.card:last-of-type {
+    margin-bottom: 0px;
+}
+
+.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card * {
+    max-width: 600px
+}
+
+.content .card img {
+    max-height: 450px;
+    max-width: 100%;
+}
+
+.card .button {
+    margin-right: inherit
+}
+
+
+/********************
+Skills
+********************/
+#skills {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#listOfSkills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+#listOfSkills .content {
+    margin-bottom: 20px;
+    padding: 0px 20px;
+
+    display: -ms-grid;
+
+    display: grid;
+    grid: auto / auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+#listOfSkills .content > * {
+    border-radius: 12px;
+    /* padding: 60px 20px; */
+    padding: 40px 20px;
+    background-color: var(--secondary-background-color);
+}
+
+
+/********************
+Contact
+********************/
+#contact {
+    background: rgb(240, 70, 84);
+
+    /* Animated gradient loop */
+    background: -o-linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
+    background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
+
+    background-size: 600% 100%;
+    -webkit-animation: gradient 16s linear infinite;
+    animation: gradient 16s linear infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+    100% {
+        background-position: 100%
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+    100% {
+        background-position: 100%
+    }
+}
+
+
+/********************
+Footer
+********************/
+footer .content {
+    display: -ms-grid;
+    display: grid;
+    grid: auto / auto auto;
+    grid-row-gap: 50px;
+    grid-column-gap: 10px;
+}
+
+footer .content p {
+    color: var(--secondary-text-color);
+}
+
+footer .content p span {
+    color: var(--text-color);
+}
+
+#altLanguageSelect {
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1em;
+    margin-right: 0;
+    background-image: url("../img/icon-arrow-down-light.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+    background-size: 15px;
+    margin-top: 4px;
+}
+
+.sourceCode {
+    line-height: 1.3em;
+}
+
+.sourceCode p {
+    padding-bottom: 10px;
+}
+
+
+/********************
+Theme Colours (Default)
+- prefers-color-scheme: light
+********************/
+:root {
+    --text-color: #3d3d3d;
+    --secondary-text-color: #86868b;
+    --tertiary-text-color: #1d1d1f;
+    --background-color: #FFFFFF;
+    --secondary-background-color: #F5F5F7;
+    --tertiary-background-color: #e2e2e2;
+    --btn-border-color: lightgrey;
+    --button-background-color: #FFFFFF;
+    --hover-button-background-color: #E1E1E1;
+    --link-color: #0066CC;
+}
+
+/* Hide/Show appearance SVG icon */
+.light {display: block}
+.dark {display: none}
+
+
+/********************
+Theme Colours
+- JavaScript added .secondaryAppearance
+********************/
+.secondaryAppearance {
+    --text-color: #e3e3e3;
+    --secondary-text-color: #6E6E73;
+    --tertiary-text-color: #A1A1A6;
+    --background-color: #000000;
+    --secondary-background-color: #141414;
+    --tertiary-background-color: #1A1A1A;
+    --btn-border-color: rgba(75, 75, 75, 0.5);
+    --button-background-color: rgb(37, 37, 37);
+    --hover-button-background-color: rgb(57, 57, 57);
+    --link-color: #2997FF;
+}
+
+.secondaryAppearance nav.fixedNav {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.secondaryAppearance nav.fixedNav {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+/* Update arrow icon appearance */
+.secondaryAppearance a:not(a.button),
+.secondaryAppearance #altLanguageSelect {
+    background-image: url("../img/icon-arrow-right-dark.svg")
+}
+
+/* Hide/Show appearance SVG icon */
+.secondaryAppearance .light {display: none}
+.secondaryAppearance .dark {display: block}
+
+
+/********************
+Theme Colours
+- prefers-color-scheme: dark
+********************/
+@media (prefers-color-scheme: dark) {
+    /* Inverse light and dark colours to allow manual toggle via JavaScript */
+    :root {
+        --text-color: #e3e3e3;
+        --secondary-text-color: #6E6E73;
+        --tertiary-text-color: #A1A1A6;
+        --background-color: #000000;
+        --secondary-background-color: #141414;
+        --tertiary-background-color: #1A1A1A;
+        --btn-border-color: rgba(75, 75, 75, 0.5);
+        --button-background-color: rgb(37, 37, 37);
+        --hover-button-background-color: rgb(57, 57, 57);
+        --link-color: #2997FF;
+    }
+
+    .secondaryAppearance {
+        --text-color: #3d3d3d;
+        --secondary-text-color: #86868b;
+        --tertiary-text-color: #1d1d1f;
+        --background-color: #FFFFFF;
+        --secondary-background-color: #F5F5F7;
+        --tertiary-background-color: #e2e2e2;
+        --btn-border-color: lightgrey;
+        --button-background-color: #FFFFFF;
+        --hover-button-background-color: #E1E1E1;
+        --link-color: #0066CC;
+    }
+
+    nav.fixedNav {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .light,
+    .secondaryAppearance .dark {display: none}
+    .dark,
+    .secondaryAppearance .light {display: block}
+
+    /* Update arrow icon appearance */
+    a:not(a.button) {background-image: url("../img/icon-arrow-right-dark.svg")}
+    .secondaryAppearance a:not(a.button) {background-image: url("../img/icon-arrow-right-light.svg")}
+    #altLanguageSelect {background-image: url("../img/icon-arrow-down-dark.svg")}
+    .secondaryAppearance #altLanguageSelect {background-image: url("../img/icon-arrow-down-light.svg")}
+}
+
+
+/********************
+Media Queries
+********************/
+/* < 760px + margins (20px on each side) */
+@media only screen and (max-width: 800px) {
+    .content {justify-items: center}
+
+    .logo {
+        height: 38px;
+        width: 152px;
+    }
+
+    #listOfSkills .content {display: block;}
+
+    #listOfSkills .content div {
+        padding: 40px 20px;
+        margin-bottom: 10px;
+    }
+
+    footer .content {
+        grid: auto / auto;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    label {display: none}
+
+    #altLanguageSelect {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* < 450px */
+@media only screen and (max-width: 450px) {
+    .links {display: inherit}
+
+    .links li a {margin-right: inherit}
+
+    .links li:last-of-type {margin-bottom: inherit}
+}
+
+
+/* Prevent Safari from keeping the hover effect after touchEvent on iOS Devices */
+@media (hover: hover) {
+    a:hover {text-decoration: underline}
+
+    .button:hover {
+        text-decoration: inherit;
+        background-color: var(--hover-button-background-color);
+    }
+}
