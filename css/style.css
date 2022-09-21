@@ -260,7 +260,7 @@ nav.fixedNav {
     -o-transition: top 0.5s;
     transition: top 0.5s;
 
-    background-color: rgba(240, 240, 240, 0.8);
+    background-color: var(--fixed-nav-background-color);
 }
 
 nav .content {
@@ -491,6 +491,7 @@ Theme Colours (Default)
     --background-color: #FFFFFF;
     --secondary-background-color: #F5F5F7;
     --tertiary-background-color: #e2e2e2;
+    --fixed-nav-background-color: rgba(240, 240, 240, 0.8);
     --btn-border-color: lightgrey;
     --button-background-color: #FFFFFF;
     --hover-button-background-color: #E1E1E1;
@@ -513,18 +514,11 @@ Theme Colours
     --background-color: #000000;
     --secondary-background-color: #141414;
     --tertiary-background-color: #1A1A1A;
+    --fixed-nav-background-color: rgba(0, 0, 0, 0.8);
     --btn-border-color: rgba(75, 75, 75, 0.5);
     --button-background-color: rgb(37, 37, 37);
     --hover-button-background-color: rgb(57, 57, 57);
     --link-color: #2997FF;
-}
-
-.secondaryAppearance nav.fixedNav {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.secondaryAppearance nav.fixedNav {
-    background-color: rgba(240, 240, 240, 0.8);
 }
 
 /* Update arrow icon appearance */
@@ -551,6 +545,7 @@ Theme Colours
         --background-color: #000000;
         --secondary-background-color: #141414;
         --tertiary-background-color: #1A1A1A;
+        --fixed-nav-background-color: rgba(0, 0, 0, 0.8);
         --btn-border-color: rgba(75, 75, 75, 0.5);
         --button-background-color: rgb(37, 37, 37);
         --hover-button-background-color: rgb(57, 57, 57);
@@ -564,14 +559,11 @@ Theme Colours
         --background-color: #FFFFFF;
         --secondary-background-color: #F5F5F7;
         --tertiary-background-color: #e2e2e2;
+        --fixed-nav-background-color: rgba(240, 240, 240, 0.8);
         --btn-border-color: lightgrey;
         --button-background-color: #FFFFFF;
         --hover-button-background-color: #E1E1E1;
         --link-color: #0066CC;
-    }
-
-    nav.fixedNav {
-        background-color: rgba(0, 0, 0, 0.8);
     }
 
     .light,
