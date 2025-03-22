@@ -381,22 +381,31 @@ Skills
 }
 
 #listOfSkills .content {
-    margin-bottom: 20px;
-    padding: 0px 20px;
-
     display: -ms-grid;
-
     display: grid;
-    grid: auto / auto auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
-#listOfSkills .content > * {
+#listOfSkills .content > div {
     border-radius: 12px;
-    /* padding: 60px 20px; */
     padding: 40px 20px;
     background-color: var(--secondary-background-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -591,11 +600,14 @@ Media Queries
         width: 152px;
     }
 
-    #listOfSkills .content {display: block;}
-
-    #listOfSkills .content div {
-        padding: 40px 20px;
-        margin-bottom: 10px;
+    #listOfSkills .content {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    
+    #listOfSkills .content > div {
+        padding: 20px;
+        width: 100%;
     }
 
     footer .content {
