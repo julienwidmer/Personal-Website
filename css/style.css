@@ -290,7 +290,7 @@ Card
 ********************/
 .card {
     background-color: var(--secondary-background-color);
-    border-radius: 12px;
+    border-radius: 20px;
     padding: var(--spacing-lg) var(--spacing-md);
     margin-bottom: 30px;
     box-shadow: var(--card-shadow);
@@ -353,7 +353,7 @@ Skills
 }
 
 #listOfSkills .content > div {
-    border-radius: 12px;
+    border-radius: 16px;
     padding: var(--spacing-lg) var(--spacing-md);
     background-color: var(--secondary-background-color);
     display: flex;
@@ -373,6 +373,9 @@ Contact
     background-size: 600% 100%;
     animation: gradient 16s linear infinite;
     animation-direction: alternate;
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 #contact .card {
@@ -544,6 +547,10 @@ Media Queries
     .logo {
         height: 38px;
         width: 152px;
+    }
+
+    .card {
+        padding-top: var(--spacing-md);
     }
 
     #listOfSkills .content {
