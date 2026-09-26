@@ -110,8 +110,10 @@ Buttons
     color: var(--text-color);
     border: 1px solid var(--btn-border-color);
     background-color: var(--button-background-color);
+    box-shadow: var(--button-shadow);
     margin-right: 12px;
     cursor: pointer;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -504,6 +506,8 @@ Theme Colours (Default)
     --btn-border-color: lightgrey;
     --button-background-color: #FFFFFF;
     --hover-button-background-color: #E1E1E1;
+    --button-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    --button-hover-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
     --link-color: #0066CC;
 }
 
@@ -527,6 +531,8 @@ Theme Colours
     --btn-border-color: rgba(75, 75, 75, 0.5);
     --button-background-color: rgb(37, 37, 37);
     --hover-button-background-color: rgb(57, 57, 57);
+    --button-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    --button-hover-shadow: 0 3px 14px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.14);
     --link-color: #2997FF;
 }
 
@@ -558,6 +564,8 @@ Theme Colours
         --btn-border-color: rgba(75, 75, 75, 0.5);
         --button-background-color: rgb(37, 37, 37);
         --hover-button-background-color: rgb(57, 57, 57);
+        --button-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+        --button-hover-shadow: 0 3px 14px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.14);
         --link-color: #2997FF;
     }
 
@@ -572,6 +580,8 @@ Theme Colours
         --btn-border-color: lightgrey;
         --button-background-color: #FFFFFF;
         --hover-button-background-color: #E1E1E1;
+        --button-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        --button-hover-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
         --link-color: #0066CC;
     }
 
@@ -643,5 +653,6 @@ Media Queries
     .button:hover {
         text-decoration: inherit;
         background-color: var(--hover-button-background-color);
+        box-shadow: var(--button-hover-shadow);
     }
 }
