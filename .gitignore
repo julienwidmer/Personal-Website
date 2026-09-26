@@ -5,3 +5,4 @@ build-tools/node_modules/
 !.idea/watcherTasks.xml
 !.idea/scopes/
 !.idea/scopes/CSS_not_min.xml
+/.mcp.json
