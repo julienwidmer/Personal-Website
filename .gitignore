@@ -1,2 +1,7 @@
 .DS_Store
-.idea/
+build-tools/node_modules/
+
+.idea/*
+!.idea/watcherTasks.xml
+!.idea/scopes/
+!.idea/scopes/CSS_not_min.xml

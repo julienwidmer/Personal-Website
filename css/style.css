@@ -1,15 +1,7 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /********************
 CSS Reset
 ********************/
 * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -19,8 +11,7 @@ CSS Reset
 html {
     height: 100%;
     /* Disable zoom effect on landscape mode for smartphones */
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -83,10 +74,7 @@ a:not(a.button) {
 }
 
 .links {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
     margin-top: 20px;
@@ -115,27 +103,15 @@ Buttons
     cursor: pointer;
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
 
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .button.round {
     border-radius: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     height: 50px;
     width: 50px;
@@ -152,11 +128,7 @@ Buttons
 }
 
 .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
@@ -200,11 +172,7 @@ html, header, footer {
 }
 
 nav, header, main, section, footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -226,10 +194,7 @@ section .content img {
 Header
 ********************/
 header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -253,13 +218,10 @@ nav {
 nav.fixedNav {
     /* Blur effect */
     backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
 
     /* Transition effect when sliding down (and up) */
     position: fixed;
     top: 0;
-    -webkit-transition: top 0.5s;
-    -o-transition: top 0.5s;
     transition: top 0.5s;
 
     background-color: var(--fixed-nav-background-color);
@@ -271,14 +233,8 @@ nav .content {
     padding: 10px 20px;
 
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 
     padding-top: 30px;
@@ -328,15 +284,8 @@ Card
 }
 
 .card {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     text-align: center;
 }
@@ -359,23 +308,13 @@ Card
 Skills
 ********************/
 #skills {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 #listOfSkills {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
     background-color: var(--background-color);
@@ -383,31 +322,21 @@ Skills
 }
 
 #listOfSkills .content {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     width: 100%;
     padding: 0 20px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #listOfSkills .content > div {
     border-radius: 12px;
     padding: 40px 20px;
     background-color: var(--secondary-background-color);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -415,28 +344,12 @@ Skills
 Contact
 ********************/
 #contact {
-    background: rgb(240, 70, 84);
-
     /* Animated gradient loop */
-    background: -o-linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
     background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
 
     background-size: 600% 100%;
-    -webkit-animation: gradient 16s linear infinite;
-    animation: gradient 16s linear infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
     animation: gradient 16s linear infinite;
     animation-direction: alternate;
-}
-
-@-webkit-keyframes gradient {
-    0% {
-        background-position: 0%
-    }
-    100% {
-        background-position: 100%
-    }
 }
 
 @keyframes gradient {
@@ -453,7 +366,6 @@ Contact
 Footer
 ********************/
 footer .content {
-    display: -ms-grid;
     display: grid;
     grid: auto / auto auto;
     grid-row-gap: 50px;
@@ -470,8 +382,6 @@ footer .content p span {
 
 #altLanguageSelect {
     height: 50px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     font-size: 1em;
     margin-right: 0;
@@ -611,10 +521,9 @@ Media Queries
     }
 
     #listOfSkills .content {
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
-    
+
     #listOfSkills .content > div {
         padding: 20px;
         width: 100%;
@@ -623,8 +532,6 @@ Media Queries
     footer .content {
         grid: auto / auto;
         text-align: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
     }
 
